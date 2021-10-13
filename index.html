@@ -59,28 +59,65 @@
     
         <div class="row min-vh-100 align-items-center">
     
-            <div class="col-md-8 d-none d-md-block" data-aos="fade-left">
+            <div class="col-md-8 md-sm" data-aos="fade-left">
                 <img src="images/sl3.jpg" width="100%" alt="">
             </div>
 
-            <div class="col-md-4 content" data-aos="fade-right">
-    
-                <div class="box">
-                    <h3> <i class="fas fa-ambulance"></i> ambulance services </h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, suscipit.</p>
-                </div>
-    
-                <div class="box">
-                    <h3> <i class="fas fa-procedures"></i> emergency rooms </h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, suscipit.</p>
-                </div>
-    
-                <div class="box">
-                    <h3> <i class="fas fa-stethoscope"></i> free check-ups </h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, suscipit.</p>
-                </div>
-    
-            </div>
+            <div class="col-md-4 ">
+				
+				<!-- ============================ -->
+				 <div class="rightSideAreaNews" id="rightSideAreaNews">
+          
+				          <!-- block start -->
+				          <div class="block">
+				            <div class="leftArea">
+				              <div class="dateTime">
+				                <span class="date">21</span>
+				                <span class="month-year">MAR 2020</span>
+				              </div>
+				            </div>
+				             <div class="RightDetailArea">
+				            <div class="title"><a href="#">Life is what you make it, so let’s make it.</a></div>
+				            <div class="descri">
+				              <p>
+				               At Florence we believe that Learning Illuminates Life, well - read and well-educated mindset helps children to analyze the real time situation of life and take the right decision.
+				              </p>
+				            </div>
+				            <div class="anchorBtn">
+				              <a href="#" class="btns">Read More</a>
+				            </div>
+				          </div>
+				          </div>
+				          <!-- block end -->
+				          
+				          <!-- block start -->
+				          <div class="block">
+				            <div class="leftArea">
+				              <div class="dateTime">
+				               <span class="date">21</span>
+				                <span class="month-year">MAR 2020</span>
+				              </div>
+				            </div>
+				             <div class="RightDetailArea">
+				            <div class="title"><a href="#">Life is what you make it, so let’s make it.</a></div>
+				            <div class="descri">
+				              <p>
+				               At Florence we believe that Learning Illuminates Life, well - read and well-educated mindset helps children to analyze the real time situation of life and take the right decision.
+				              </p>
+				            </div>
+				            <div class="anchorBtn">
+				              <a href="#" class="btns">Read More</a>
+				            </div>
+				          </div>
+				          </div>
+				          <!-- block end -->
+				          
+
+				          
+				        </div>
+				<!-- ============================ -->
+
+			</div>
     
         </div>
     
@@ -356,7 +393,32 @@
 
 
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		var interval;
+		function ticker()
+		{
+			if($("#rightSideAreaNews .block").length > 1)
+			{
+				$("#rightSideAreaNews .block:first").slideUp(function(){
+					$(this).appendTo("#rightSideAreaNews").slideDown();
+				});
+			}
+			function stop()
+			{
+				clearInterval(interval);
+			}
+		}
 
+		$(document).ready(function(){
+				interval = setInterval(ticker,3000);
+			$("#rightSideAreaNews").hover(function(){
+				stop();
+			},function(){
+				interval = setInterval(ticker,3000);
+			});
+		});
+	</script>
 
 
 
