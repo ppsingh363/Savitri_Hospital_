@@ -449,14 +449,7 @@ header .fa-bars{
 
 
 
-
-
-
-
-
-
-
-header .fa-times{
+.header .fa-times{
   transform: rotate(180deg);
 }
 
