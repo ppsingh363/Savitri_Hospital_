@@ -84,9 +84,10 @@ section{
 
 header{
   width:100%;
+  background:#fff;
   position: fixed;
   top:0; left: 0;
-  padding:2rem 1rem;
+  
   z-index: 1000;
 }
 
